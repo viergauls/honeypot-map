@@ -1,0 +1,15 @@
+{
+  "name": "honeypot-map",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "蜜獾地图 — 把全网对这台机器的扫描尝试实时画到世界地图上",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "TRAP_PORTS=12222,12375,13389,15900,16379,19200,11337 WEB_PORT=18080 node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

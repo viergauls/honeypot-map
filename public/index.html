@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>蜜獾地图 · 谁在敲这扇门</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app">
+
+  <header class="bar">
+    <div class="brand">
+      <span class="dot"></span>
+      <div class="brand-txt">
+        <h1>蜜獾地图</h1>
+        <span class="sub" id="homeLabel">定位中…</span>
+      </div>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><b id="kTotal">0</b><span>累计命中</span></div>
+      <div class="kpi"><b id="k24">0</b><span>近 24 小时</span></div>
+      <div class="kpi"><b id="kIps">0</b><span>独立来源</span></div>
+      <div class="kpi"><b id="kCc">0</b><span>国家 / 地区</span></div>
+    </div>
+    <div class="live" id="live"><i class="pulse"></i><span>连接中</span></div>
+  </header>
+
+  <main class="grid">
+
+    <section class="panel map-panel">
+      <div class="panel-head">
+        <h2>实时扫描来源</h2>
+        <span class="hint">滚轮缩放 · 拖拽平移</span>
+      </div>
+      <div id="map"></div>
+      <div class="map-empty" id="mapEmpty">
+        <b>地图待命中</b>
+        <span>还没有扫描者上门。诱饵端口开着，等风来。</span>
+      </div>
+    </section>
+
+    <aside class="side">
+      <section class="panel">
+        <div class="panel-head"><h2>来源国家 / 地区</h2></div>
+        <div class="ranks" id="rankCc"><p class="empty">暂无数据</p></div>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><h2>被敲的端口</h2></div>
+        <div class="ranks" id="rankPort"><p class="empty">暂无数据</p></div>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><h2>最执着的来源</h2></div>
+        <div class="ranks" id="rankSrc"><p class="empty">暂无数据</p></div>
+      </section>
+    </aside>
+
+    <section class="panel feed-panel">
+      <div class="panel-head">
+        <h2>实时命中流水</h2>
+        <span class="hint" id="feedCount">0 条</span>
+      </div>
+      <div class="feed" id="feed"><p class="empty">等待第一个敲门的人…</p></div>
+    </section>
+
+  </main>
+</div>
+
+<script src="/vendor/echarts.min.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
